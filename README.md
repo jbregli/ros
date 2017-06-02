@@ -72,6 +72,7 @@ Once in the container, source directly /opt/ros/kinetic/setup.bash, not ros_entr
 - [docker starting point](http://teslacore.blogspot.co.uk/2016/07/docker-for-our-ros-robotic-overlords.html)
 - [good-starting-point-tuto](http://moorerobots.com/blog)
 - [cheatsheet](https://rych.dcc.uchile.cl/lib/exe/fetch.php?media=documentacion:roscheatsheet_catkin.pdf)
+- [movit-tutorial](http://docs.ros.org/kinetic/api/moveit_tutorials/html/)
 
 
 
