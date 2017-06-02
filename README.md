@@ -63,19 +63,15 @@ On linux, just use
     docker run -it -e DISPLAY=$DISPLAY -e QT_X11_NO_MITSHM=1  -v /tmp/.X11-unix:/tmp/.X11-unix -v $PWD:/root -v /home/cthorey/.bashrc:/root/.bashrc osrf/ros:indigo-desktop-full 
 ```
 
-## Tutorial 
+Once in the container, source directly /opt/ros/kinetic/setup.bash, not ros_entrypoint if you dont want your session to exit every so often..
 
-You                  can                   access                  the
-tutorial
-[here](http://wiki.ros.org/ROS/Tutorials/NavigatingTheFilesystem).
+## Ressources 
 
-Start a container,  with the display, and start rosscore  into it. You
-can then connect to this container using 
+-  [opencv interface](http://wiki.ros.org/cv_bridge/Tutorials/ConvertingBetweenROSImagesAndOpenCVImagesPython)
+- [dodcker images](https://hub.docker.com/r/osrf/ros/tags/)
+- [docker starting point](http://teslacore.blogspot.co.uk/2016/07/docker-for-our-ros-robotic-overlords.html)
+- [good-starting-point-tuto](http://moorerobots.com/blog)
+- [cheatsheet](https://rych.dcc.uchile.cl/lib/exe/fetch.php?media=documentacion:roscheatsheet_catkin.pdf)
 
-```
-docker exec -it *CONTAINERID$ bash
-```
 
-Then, dont source the ros_entrypoint.sh to get everything setup.
-Instead go to your 
 
