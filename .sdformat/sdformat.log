@@ -1,0 +1,58 @@
+Dbg [parser.cc:356] No <sdf> element in file[data-string]
+Dbg [parser_urdf.cc:1323] extension [<plugin filename="libgazebo_ros_diff_drive.so" name="differential_drive_controller"><legacyMode>false</legacyMode><alwaysOn>true</alwaysOn><updateRate>20</updateRate><leftJoint>left_wheel_hinge</leftJoint><rightJoint>right_wheel_hinge</rightJoint><wheelSeparation>0.4</wheelSeparation><wheelDiameter>0.1</wheelDiameter><torque>20</torque><commandTopic>cmd_vel</commandTopic><odometryTopic>odom</odometryTopic><odometryFrame>odom</odometryFrame><robotBaseFrame>chassis</robotBaseFrame><robotNamespace>/</robotNamespace></plugin>] not converted from URDF, probably already in SDF format.
+Dbg [parser_urdf.cc:1323] extension [<sensor name="camera1" type="camera"><update_rate>30.0</update_rate><camera name="head"><horizontal_fov>1.3962634</horizontal_fov><image><width>800</width><height>800</height><format>R8G8B8</format></image><clip><near>0.02</near><far>300</far></clip></camera><plugin filename="libgazebo_ros_camera.so" name="camera_controller"><alwaysOn>true</alwaysOn><updateRate>0.0</updateRate><cameraName>mybot/camera1</cameraName><imageTopicName>image_raw</imageTopicName><cameraInfoTopicName>camera_info</cameraInfoTopicName><frameName>camera</frameName><hackBaseline>0.07</hackBaseline><distortionK1>0.0</distortionK1><distortionK2>0.0</distortionK2><distortionK3>0.0</distortionK3><distortionT1>0.0</distortionT1><distortionT2>0.0</distortionT2><robotNamespace>/</robotNamespace></plugin></sensor>] not converted from URDF, probably already in SDF format.
+Dbg [parser_urdf.cc:1323] extension [<sensor name="head_hokuyo_sensor" type="gpu_ray"><pose>0 0 0 0 0 0</pose><visualize>true</visualize><update_rate>40</update_rate><ray><scan><horizontal><samples>720</samples><resolution>1</resolution><min_angle>-1.570796</min_angle><max_angle>1.570796</max_angle></horizontal></scan><range><min>0.10</min><max>30.0</max><resolution>0.01</resolution></range><noise><type>gaussian</type><!-- Noise parameters based on published spec for Hokuyo laser
+               achieving "+-30mm" accuracy at range < 10m.  A mean of 0.0m and
+               stddev of 0.01m will put 99.7% of samples within 0.03m of the true
+               reading. --><mean>0.0</mean><stddev>0.01</stddev></noise></ray><plugin filename="libgazebo_ros_gpu_laser.so" name="gazebo_ros_head_hokuyo_controller"><topicName>/mybot/laser/scan</topicName><frameName>hokuyo</frameName><robotNamespace>/</robotNamespace></plugin></sensor>] not converted from URDF, probably already in SDF format.
+Dbg [parser_urdf.cc:370] Fixed Joint Reduction: extension lumping from [camera] to [chassis]
+Dbg [parser_urdf.cc:1897]   REDUCE EXTENSION: moving reference from [camera] to [chassis]
+Dbg [parser_urdf.cc:1961]   STRING REPLACE: instances of _link name [camera] with [chassis]
+Dbg [parser_urdf.cc:1970]         INITIAL STRING link [camera]-->[chassis]: [<plugin filename="libgazebo_ros_diff_drive.so" name="differential_drive_controller"><legacyMode>false</legacyMode><alwaysOn>true</alwaysOn><updateRate>20</updateRate><leftJoint>left_wheel_hinge</leftJoint><rightJoint>right_wheel_hinge</rightJoint><wheelSeparation>0.4</wheelSeparation><wheelDiameter>0.1</wheelDiameter><torque>20</torque><commandTopic>cmd_vel</commandTopic><odometryTopic>odom</odometryTopic><odometryFrame>odom</odometryFrame><robotBaseFrame>chassis</robotBaseFrame><robotNamespace>/</robotNamespace></plugin>]
+Dbg [parser_urdf.cc:1961]   STRING REPLACE: instances of _link name [camera] with [chassis]
+Dbg [parser_urdf.cc:1961]   STRING REPLACE: instances of _link name [camera] with [chassis]
+Dbg [parser_urdf.cc:1970]         INITIAL STRING link [camera]-->[chassis]: [<sensor name="camera1" type="camera"><update_rate>30.0</update_rate><camera name="head"><horizontal_fov>1.3962634</horizontal_fov><image><width>800</width><height>800</height><format>R8G8B8</format></image><clip><near>0.02</near><far>300</far></clip></camera><plugin filename="libgazebo_ros_camera.so" name="camera_controller"><alwaysOn>true</alwaysOn><updateRate>0.0</updateRate><cameraName>mybot/camera1</cameraName><imageTopicName>image_raw</imageTopicName><cameraInfoTopicName>camera_info</cameraInfoTopicName><frameName>camera</frameName><hackBaseline>0.07</hackBaseline><distortionK1>0.0</distortionK1><distortionK2>0.0</distortionK2><distortionK3>0.0</distortionK3><distortionT1>0.0</distortionT1><distortionT2>0.0</distortionT2><robotNamespace>/</robotNamespace></plugin><pose>0.2 0 0 0 -0 0</pose></sensor>]
+Dbg [parser_urdf.cc:1961]   STRING REPLACE: instances of _link name [camera] with [chassis]
+Dbg [parser_urdf.cc:1970]         INITIAL STRING link [camera]-->[chassis]: [<sensor name="head_hokuyo_sensor" type="gpu_ray"><pose>0 0 0 0 0 0</pose><visualize>true</visualize><update_rate>40</update_rate><ray><scan><horizontal><samples>720</samples><resolution>1</resolution><min_angle>-1.570796</min_angle><max_angle>1.570796</max_angle></horizontal></scan><range><min>0.10</min><max>30.0</max><resolution>0.01</resolution></range><noise><type>gaussian</type><!-- Noise parameters based on published spec for Hokuyo laser
+               achieving "+-30mm" accuracy at range < 10m.  A mean of 0.0m and
+               stddev of 0.01m will put 99.7% of samples within 0.03m of the true
+               reading. --><mean>0.0</mean><stddev>0.01</stddev></noise></ray><plugin filename="libgazebo_ros_gpu_laser.so" name="gazebo_ros_head_hokuyo_controller"><topicName>/mybot/laser/scan</topicName><frameName>hokuyo</frameName><robotNamespace>/</robotNamespace></plugin></sensor>]
+Dbg [parser_urdf.cc:1961]   STRING REPLACE: instances of _link name [camera] with [chassis]
+Dbg [parser_urdf.cc:1961]   STRING REPLACE: instances of _link name [camera] with [chassis]
+Dbg [parser_urdf.cc:635] LINK NAME: [parent: chassis] from dMass
+Dbg [parser_urdf.cc:636]      MASS: [10]
+Dbg [parser_urdf.cc:637]        CG: [0, 0, 0.1]
+Dbg [parser_urdf.cc:639]         I: [0.6, 0, 0]
+Dbg [parser_urdf.cc:641]            [0, 1.1, 0]
+Dbg [parser_urdf.cc:643]            [0, 0, 0.1]
+Dbg [parser_urdf.cc:635] LINK NAME: [link : camera] from dMass
+Dbg [parser_urdf.cc:636]      MASS: [0.1]
+Dbg [parser_urdf.cc:637]        CG: [0, 0, 0]
+Dbg [parser_urdf.cc:639]         I: [1e-06, 0, 0]
+Dbg [parser_urdf.cc:641]            [0, 1e-06, 0]
+Dbg [parser_urdf.cc:643]            [0, 0, 1e-06]
+Dbg [parser_urdf.cc:635] LINK NAME: [link in parent link: camera] from dMass
+Dbg [parser_urdf.cc:636]      MASS: [0.1]
+Dbg [parser_urdf.cc:637]        CG: [0.2, 0, 0]
+Dbg [parser_urdf.cc:639]         I: [1e-06, 0, 0]
+Dbg [parser_urdf.cc:641]            [0, 0.004001, 0]
+Dbg [parser_urdf.cc:643]            [0, 0, 0.004001]
+Dbg [parser_urdf.cc:635] LINK NAME: [combined: chassis] from dMass
+Dbg [parser_urdf.cc:636]      MASS: [10.1]
+Dbg [parser_urdf.cc:637]        CG: [0.0019802, 0, 0.0990099]
+Dbg [parser_urdf.cc:639]         I: [0.600001, 0, 0]
+Dbg [parser_urdf.cc:641]            [0, 1.104, 0]
+Dbg [parser_urdf.cc:643]            [0, 0, 0.104001]
+Dbg [parser_urdf.cc:651] LINK NAME: [chassis] from dMass
+Dbg [parser_urdf.cc:652]      MASS: [10.1]
+Dbg [parser_urdf.cc:653]        CG: [0.0019802, 0, 0.0990099]
+Dbg [parser_urdf.cc:656]         I: [0.500991, 0, 0.0019802]
+Dbg [parser_urdf.cc:659]            [0, 1.00495, 0]
+Dbg [parser_urdf.cc:662]            [0.0019802, 0, 0.103961]
+Dbg [parser_urdf.cc:848] adding modified lump group name [lump::camera] to link [chassis].
+Dbg [parser_urdf.cc:338] successfully added a new visual group name [lump::camera]
+Dbg [parser_urdf.cc:906] lumping collision [default] for link [camera] to parent [chassis] with group name [lump::camera]
+Dbg [parser_urdf.cc:370] Fixed Joint Reduction: extension lumping from [hokuyo] to [chassis]
+Dbg [parser_urdf.cc:1897]   REDUCE EXTENSION: moving reference from [hokuyo] to [chassis]
+Dbg [parser_urdf.cc:1961]   STRING REPLACE: instances of _link name [hokuyo] with [chassis]
+Dbg [parser_urdf.cc:1970]         INITIAL STRING link [hokuyo]-->[chassis]: [<plugin filename="libgazebo_ros_diff_drive.so" name="differential_drive_controller"><legacyMode>false</legacyMode><alwaysOn>true</alwaysOn><updateRate>20</updateRate><leftJoint>left_wheel_hinge</leftJoint><rightJoint>right_wheel_hinge</rightJoint><wheelSeparation>0.4</wheelSeparation><wheelDiameter>0.1</wheelDiameter><torque>20</torque><commandTopic>cmd_vel</commandTopic><odometryTopic>odom</odometryTopic><odometryFrame>odom</odometryFrame><robotBaseFrame>chassis</robotBaseFrame><robotNamespace>/</robotNamespace></plugin>
