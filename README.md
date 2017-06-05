@@ -6,7 +6,7 @@ The easy  way to start with  ROS is to  use docker. A set  of official
 images are maintained on dockerhub. We are going to use kinematic.
 
 ```
-    docker pull docker pull osrf/ros:kinetic-desktop-full
+    docker pull osrf/ros:kinetic-desktop-full
 ```
 
 For     a    brief     overview,     check     out    the     official
