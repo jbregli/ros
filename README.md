@@ -26,7 +26,7 @@ We are going to tag this image to ros for convenience.
  default, the container runs as the root user, so /root/.ros/ would be
  the full path to these files.
  
- Create a ros-uto directory and into that dir, to start a container, just use
+ Create a ros-tuto directory and into that dir, to start a container, just use
  
  ```
     docker run -v $PWD/.ros:/root/.ros $PWD/opt:/opt ros
@@ -60,7 +60,7 @@ At the end, after running xquartz, run the container using
 On linux, just use
 
 ```
-    docker run -it -e DISPLAY=$DISPLAY -e QT_X11_NO_MITSHM=1  -v /tmp/.X11-unix:/tmp/.X11-unix -v $PWD:/root -v /home/cthorey/.bashrc:/root/.bashrc osrf/ros:indigo-desktop-full 
+    docker run -it -e DISPLAY=$DISPLAY -e QT_X11_NO_MITSHM=1  -v /tmp/.X11-unix:/tmp/.X11-unix -v $PWD:/root -v ~/.bashrc:/root/.bashrc osrf/ros:indigo-desktop-full 
 ```
 
 Once in the container, source directly /opt/ros/kinetic/setup.bash, not ros_entrypoint if you dont want your session to exit every so often..
